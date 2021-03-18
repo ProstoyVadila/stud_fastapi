@@ -8,6 +8,6 @@ class Post(Base):
 
     id = Column(Integer, primary_key=True, index=True, unique=True)
     title = Column(String)
-    text = Column(Text(400))
+    text = Column(Text)
     created_at = Column(DateTime)
 
