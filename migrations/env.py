@@ -11,7 +11,7 @@ from alembic import context
 sys.path = ['', '..'] + sys.path[1:]
 
 from config import SA_DATABASE_URL
-from core.db import Base
+from core.base import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
