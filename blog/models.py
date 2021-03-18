@@ -12,4 +12,5 @@ class Post(Base):
     text = Column(Text)
     created_at = Column(DateTime)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship('User')
+
+    user = relationship('User', back_populates='posts')

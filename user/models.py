@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Integer, DateTime, Boolean
+from sqlalchemy.orm import relationship
 
 from core.db import Base
 
@@ -12,4 +13,6 @@ class User(Base):
     password = Column(String)
     created_at = Column(DateTime)
     is_active = Column(Boolean, default=False)
-    is_admin = Column(Boolean, default=False)
+
+
+    posts = relationship('Post', back_populates='user')

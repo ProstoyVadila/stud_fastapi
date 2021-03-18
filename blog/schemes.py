@@ -12,8 +12,9 @@ class PostBase(BaseModel):
         orm_mode = True
 
 
-class PostList(PostBase):
+class Post(PostBase):
     id: int
+    user_id: int
 
 
 class PostCreate(PostBase):

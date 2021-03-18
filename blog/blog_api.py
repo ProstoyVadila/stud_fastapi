@@ -6,12 +6,12 @@ from sqlalchemy.orm import Session
 from core.db import get_db
 
 from . import service
-from .schemes import PostCreate, PostList
+from .schemes import PostCreate, Post
 
 router = APIRouter()
 
 
-@router.get('/', response_model=List[PostList])
+@router.get('/', response_model=List[Post])
 def post_list(db: Session = Depends(get_db)):
     return service.get_post_list(db)
 
