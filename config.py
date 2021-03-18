@@ -10,3 +10,5 @@ PG_USER = os.getenv('PG_USER')
 PG_PASSWORD = os.getenv('PG_PASSWORD')
 HOST = os.getenv('HOST')
 POST = os.getenv('PORT')
+
+SA_DATABASE_URL = f'postgres://{PG_USER}:{PG_PASSWORD}@{HOST}:{POST}/{PG_DATABASE}'
